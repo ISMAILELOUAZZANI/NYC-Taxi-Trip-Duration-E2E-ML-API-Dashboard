@@ -14,7 +14,7 @@ Project highlights:
 - Containerized: Docker + docker-compose
 
 Repository layout
-```markdown
+
 nyc-taxi-duration/
 ├─ data/                # use DVC or keep out of git
 │  ├─ raw/              # train.csv, test.csv
