@@ -1,0 +1,19 @@
+train:
+  seed: 42
+  test_size: 0.2
+  xgb:
+    n_estimators: 500
+    learning_rate: 0.05
+    max_depth: 8
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+data:
+  raw_path: data/raw/train.csv
+  processed_path: data/processed/train_processed.parquet
+features:
+  use_haversine: true
+  use_time_features: true
+api:
+  host: 0.0.0.0
+  port: 8000
