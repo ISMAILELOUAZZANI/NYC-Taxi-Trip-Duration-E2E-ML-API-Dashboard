@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_PATH=/app/models/xgb.joblib
+    volumes:
+      - ./:/app
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000
+
+  streamlit:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000/predict
+    volumes:
+      - ./:/app
+    command: streamlit run src/app/streamlit_app.py --server.port 8501 --server.address 0.0.0.0

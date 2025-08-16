@@ -1,0 +1,17 @@
+# Data and models
+data/
+models/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
